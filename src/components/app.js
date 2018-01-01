@@ -40,7 +40,12 @@ class App extends Component {
                     <h1 className="App-title">My Sight Words</h1>
                 </header>
                 <WordBox word={this.state.wordlist[this.state.cntr]}/>
-                <Controls />
+                <Controls 
+                    prevWord={this.prevWordButton}
+                    nextWord={this.nextWordButton}
+                    randWord={this.randWordButton}
+                    reset={this.resetButton}
+                />
             </div>
         );
     }
@@ -51,6 +56,7 @@ class App extends Component {
         let wordlist = Object.keys(Config.words);
 
         let initial_state = {
+            cntr: 0,
             wordlist: wordlist,
             page: Config.words[wordlist[0]],
             max: wordlist.length,
@@ -60,6 +66,33 @@ class App extends Component {
         this.setState(initial_state, ()=>{
             console.log("state: ", this.state);
         });
+    }
+
+    prevWordButton = () => {
+        let v = (this.state.cntr - 1) % this.state.max;
+        if ( v < 0 ) {
+            v = this.state.max - 1;
+        }
+        this.setState( {cntr: v}, () => {
+            console.log("state: ", this.state);
+        });
+    }
+
+    nextWordButton = () => {
+        this.setState( {cntr: (this.state.cntr + 1) % this.state.max}, () => {
+            console.log("state: ", this.state);
+        });
+    }
+
+    randWordButton = () => {
+        let v = ( Math.floor(Math.random() * 100) ) % this.state.max;
+        this.setState( {cntr: v}, () => {
+            console.log("state: ", this.state);
+        });
+    }
+
+    resetButton = () => {
+        this.init_state();
     }
 
 }
