@@ -6,8 +6,6 @@ import Config from '../config';
 import WordBox from './wordbox';
 import Controls from './controls';
 
-import '../css/app.css';
-
 // ---------------------------------------------------------------------------
 
 /**
@@ -37,7 +35,7 @@ class App extends Component {
         return (
             <div className="App">
                 <header className="App-header">
-                    <h1 className="App-title">My Sight Words</h1>
+                    <h1 className="title">My Sight Words</h1>
                 </header>
                 <WordBox word={this.state.wordlist[this.state.cntr]}/>
                 <Controls 

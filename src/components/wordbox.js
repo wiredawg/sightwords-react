@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import { Grid, Row, Col } from 'react-bootstrap';
 
 class Arrow extends Component {
     render() {
         let state = (this.props.state === 1) ? 'active' : 'inactive';
         return (
-            <div id="arrow" className={state}>&rarr;</div>
+            <p id="arrow" className={state}>&rarr;</p>
         );
     }
 }
@@ -12,10 +13,15 @@ class Arrow extends Component {
 class WordBox extends Component {
     render() {
         return (
-            <div id='wordbox-wrapper'>
-                <div id="wordbox">{this.props.word}</div>
-                <Arrow state={1} />
-            </div>
+            <Grid>
+                <Row className='showGrid'>
+                    <p id="wordbox">{this.props.word}</p>
+                </Row>
+
+                <Row className='showGrid'>
+                    <Arrow state={1} />
+                </Row>
+            </Grid>
         );
     }
 }

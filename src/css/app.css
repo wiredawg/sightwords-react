@@ -3,9 +3,14 @@
  */
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #fee;
+}
+
+* {
+    user-select: none;
 }
 
 /*
@@ -13,38 +18,27 @@ body {
  */
 
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-header {
-  background-color: #ffbaba;
-  padding: 1px;
-  color: white;
-  border-bottom: 1px solid black;
+    background-color: #faa;
+    padding: 1px;
+    color: white;
+    border-bottom: 1px solid #f88;
 }
-
-.App-title {
-  font-size: 1.5em;
-}
-
 
 /*
  * Words Container Objects
  */
 
-#wordbox-wrapper {
-    padding-top: 20px;
-}
-
 #wordbox {
-    text-align:center;
     font-size: 120px;
 }
 
 #arrow{
-    text-align:center;
     font-size: 120px;
-    margin-top: -40px;
+    margin: -100px 0px -30px 0px;
 }
 
 .active {
@@ -56,19 +50,14 @@ body {
 }
 
 .control-button {
-    text-align:center;
     font-size: 80px;
-    border: 1px solid #000;
-    background: #FF9A9A;
+    border: 1px solid #F88;
+    background: #faa;
 }
 
 .control-button:hover {
     cursor: pointer;
-    background: #FFBABA;
+    background: #fcc;
     color: white;
-}
-
-#rand-button {
-    background: #FF9A9A;
 }
 
