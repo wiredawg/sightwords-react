@@ -15,11 +15,15 @@ class WordBox extends Component {
         return (
             <Grid>
                 <Row className='showGrid'>
-                    <p id="wordbox">{this.props.word}</p>
+                    <Col>
+                        <p id="wordbox">{this.props.word}</p>
+                    </Col>
                 </Row>
 
                 <Row className='showGrid'>
-                    <Arrow state={1} />
+                    <Col>
+                        <Arrow state={1} />
+                    </Col>
                 </Row>
             </Grid>
         );
