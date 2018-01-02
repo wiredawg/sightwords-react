@@ -2,6 +2,7 @@
   "name": "sightwords-react",
   "version": "0.1.0",
   "private": true,
+  "homepage" : "https://wiredawg.github.io/sightwords-react",
   "dependencies": {
     "bootstrap": "^3.3.7",
     "react": "^16.2.0",
